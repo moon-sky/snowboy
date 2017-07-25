@@ -6,7 +6,7 @@ buildscript {
         classpath 'com.android.tools.build:gradle:2.3.0'
     }
 }
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
@@ -27,6 +27,7 @@ android {
             renderscript.srcDirs = ['src']
             res.srcDirs = ['res']
             assets.srcDirs = ['assets']
+            jniLibs.srcDirs=['jniLibs']
         }
 
         // Move the tests to tests/java, tests/res, etc...

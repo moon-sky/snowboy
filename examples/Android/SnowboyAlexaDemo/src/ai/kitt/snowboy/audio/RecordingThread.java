@@ -1,19 +1,19 @@
 package ai.kitt.snowboy.audio;
 
+import android.media.AudioFormat;
+import android.media.AudioRecord;
+import android.media.MediaPlayer;
+import android.media.MediaRecorder;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
 import ai.kitt.snowboy.Constants;
 import ai.kitt.snowboy.MsgEnum;
-import android.media.AudioFormat;
-import android.media.AudioRecord;
-import android.media.MediaRecorder;
-import android.media.MediaPlayer;
-import android.os.Handler;
-import android.os.Message;
-import android.util.Log;
-
 import ai.kitt.snowboy.SnowboyDetect;
 
 public class RecordingThread {
@@ -41,8 +41,8 @@ public class RecordingThread {
         this.listener = listener;
 
         detector.SetSensitivity("0.6");
-        //-detector.SetAudioGain(1);
-        detector.ApplyFrontend(true);
+        detector.SetAudioGain(1);
+//        detector.ApplyFrontend(true);
         try {
             player.setDataSource(strEnvWorkSpace+"ding.wav");
             player.prepare();

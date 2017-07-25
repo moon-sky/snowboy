@@ -1,9 +1,7 @@
 package ai.kitt.snowboy;
 
-import ai.kitt.snowboy.audio.RecordingThread;
-import ai.kitt.snowboy.audio.PlaybackThread;
-
 import android.app.Activity;
+import android.content.Context;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,9 +13,10 @@ import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.content.Context;
 
 import ai.kitt.snowboy.audio.AudioDataSaver;
+import ai.kitt.snowboy.audio.PlaybackThread;
+import ai.kitt.snowboy.audio.RecordingThread;
 import ai.kitt.snowboy.demo.R;
 
 
